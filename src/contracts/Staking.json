@@ -1,0 +1,163 @@
+{
+  "version": "0.0.0",
+  "name": "Staking",
+  "instructions": [
+    {
+      "name": "stake",
+      "accounts": [
+        {
+          "name": "stakeAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "user",
+          "isMut": false,
+          "isSigner": true
+        },
+        {
+          "name": "userToken",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "cpiState",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "datafarm",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "campaign",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "poolVault",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "clock",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "unstake",
+      "accounts": [
+        {
+          "name": "stakeAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "user",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "userToken",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "poolVault",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "pdaAccount",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "cpiState",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "datafarm",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "clock",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    }
+  ],
+  "accounts": [
+    {
+      "name": "stakeAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "tokenAmount",
+            "type": "u64"
+          },
+          {
+            "name": "lockInTime",
+            "type": "i64"
+          },
+          {
+            "name": "startBlock",
+            "type": "u64"
+          },
+          {
+            "name": "lockOutTime",
+            "type": "i64"
+          },
+          {
+            "name": "endBlock",
+            "type": "u64"
+          },
+          {
+            "name": "weight",
+            "type": "u64"
+          },
+          {
+            "name": "pendingReward",
+            "type": "u64"
+          },
+          {
+            "name": "status",
+            "type": "bool"
+          },
+          {
+            "name": "tokenAddress",
+            "type": "publicKey"
+          },
+          {
+            "name": "userAddress",
+            "type": "publicKey"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e4e2e2;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgb(148, 147, 147);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(119, 118, 118);
+}
+
+.MuiTableRow-root td:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.MuiTableRow-root td:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
